@@ -1,4 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    background-color: #FFF7E8;
+    overflow: hidden;
+}
+
+header::after{
+    content: "";
+    width: 27%;
+    background-color: #35CD8C;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+
+nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+    align-items: center;
+    padding: 10px;
+}
+
+nav .one{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+nav .one .logo{
+    padding:  0 20px ;
+    font-size: 30px;
+    color: #35CD8C;
+}
+nav .one .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:600px) {
+    nav .one .nav{
+        display: none;
+    }
+
+}
+nav .one .nav ul{
+    display: flex;
+    list-style: none;
+    margin-left: 20px;
+}
+nav .one .nav ul li{
+    margin-right: 10px;
+}
+nav .one .nav ul li a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s linear;
+}
+
+nav .one .nav ul li a:hover {
+    text-decoration: underline;
+    color: #35CD8C;
+}
+
+nav  .user {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+nav  .user  button{
+    width: 30px;
+    height: 30px;
+    background-color: #FFF7E8;
+    border: none;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+@media (max-width:440px) {
+    nav  .user  button{
+        border: 2px solid #fff;
+    }
+}
+
+nav .user a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #FFF7E8;
+
+}
+nav .user a i {
+    position:  relative;
+    top: 2px;
+}
+
+section.hero{
+    width:100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    position: relative;
+    z-index: 3;
+}
+section.hero .text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+section.hero .text .location{
+    position: absolute;
+    width: 200px;
+    background-color: #35CD8C;
+    padding: 10px 20px;
+    border-radius: 0 20px 20px 0;
+    bottom: 30px;
+    left: 0;
+    color: #fff;
+}
+
+section.hero .text .location i{
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+section.hero .text .textCon{
+    width: 100%;
+    padding-left: 20px;
+    line-height: 60px;
+    position: relative;
+    right: -90px;
+}
+
+@media (max-width:550px) {
+    section.hero .text .textCon{
+        right: 0;
+    }
+}
+section.hero .text .textCon h1{
+    font-size: 90px;
+    color: #35CD8C40;
+    font-weight: 900;
+}
+
+section.hero .text .textCon p{
+    font-size: 50px;
+    font-weight: 700;
+}
+section.hero .text .textCon .inpg{
+    display: flex;
+
+}
+
+section.hero .text .textCon .inpg input{
+    background-color: #fff;
+    font-size: 20px;
+    padding: 10px 5px; 
+    border: none;
+    outline: none;
+}
+section.hero .text .textCon .inpg button{
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+    border: none;
+    background-color: #35CD8C;
+    color: #fff;
+    border-radius: 0 5px 30px 0;
+    cursor: pointer;
+}
+@media (max-width:480px) {
+    section.hero .text .textCon .inpg button{
+        border: 2px solid #fff;
+    }
+}
+
+section.hero .imgcon{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+section.hero .imgcon .imgbg{
+    position: absolute;
+    left: -30%;
+}
+
+section.hero .imgcon .imgbg img{
+    width: 400px;
+    height: auto;
+
+}
+
+.imgsalad{
+    position: absolute;
+    top: -100px;
+    left: 5px;
+}
+.imgsalad img{
+    width: 400px;
+    height: auto;
+}
+.imgplate{
+    position: absolute;
+    left: -50px;
+}
+.imgplate img {
+    width: 600px;
+    height: auto;
 }
