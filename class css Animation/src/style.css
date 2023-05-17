@@ -1,0 +1,31 @@
+body{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    
+    animation: nahid 4s infinite;
+}
+
+
+@keyframes nahid {
+    0%{
+        transform: translateY(30px);
+
+        background: green;
+    }
+    50%{
+        background: red;
+    }
+    100%{
+        transform: translateY(0px);
+        
+        background: blue;
+    }
+}
